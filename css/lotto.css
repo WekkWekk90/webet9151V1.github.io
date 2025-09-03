@@ -1,0 +1,259 @@
+    h2 {
+      border-left: 5px solid gold;
+      padding-left: 10px;
+      margin-bottom: 15px;
+      margin-left: 60px;
+    }
+
+    .containerl {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      max-width: 90%;
+      flex-wrap: wrap;
+      
+    }
+
+    .cardl {
+      background: #3b3b3b;
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 15px;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      width: 570px;
+     
+    }
+
+    .cardl img {
+      width: 130px;
+      height: 170px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .contentl {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.bottom {
+  display: flex;
+  justify-content: flex-end; /* ផ្លាស់ប្តូរទៅខាងស្ដាំ */
+  height: 20px;
+}
+
+
+
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .score {
+      font-size: 14px;
+    }
+
+    .score span {
+      margin-right: 10px;
+    }
+
+    .score .blue {
+      color: #4aa3ff;
+    }
+
+    .score .red {
+      color: #ff5252;
+    }
+
+    .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* ចែកជាកូឡុំស្មើៗ */
+  gap: 10px; /* ចន្លោះរវាងរូប */
+  margin-top: 10px;
+}
+
+.grid img {
+  width: 350px;
+  height: 140px;
+  object-fit: cover;     /* រូបមិនបត់ កាត់ឲ្យស្អាត */
+  border-radius: 8px;    /* ជ្រុងមូល */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4); /* shadow ស្អាតៗ */
+  display: block;
+  margin: auto;
+  margin-top: -10px;
+  transition: 0.3s ease;
+}
+
+
+    
+
+    .red-ball {
+      background: #ff5252;
+      color: #fff;
+    }
+    .play-btn{
+        background-color: rgb(179, 158, 5);
+        font-weight: bold;
+        padding: 15px;
+        border-radius: 8px;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-right: -70px;
+        writing-mode: vertical-rl; /* Button ឈរ */
+        margin-top: -150px;
+        
+        text-align: center;
+    }
+    .play-btn:hover{
+        transform: scale(110%);
+        transition: 0.3s ease;
+    }
+    .container a{
+        text-decoration: none;
+    }
+    .container a span{
+        text-decoration: none;
+        color: #fff;
+    }
+
+    /* section for footer */
+    footer {
+      background: #1a1a1a;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: auto;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    footer .footer-links {
+      margin: 15px 0;
+    }
+
+    footer .footer-links a {
+      color: #ccc;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    footer .footer-links a:hover {
+      color: #fff;
+    }
+
+    footer .footer-logos {
+      margin: 15px 0;
+    }
+
+    footer .footer-logos img {
+      height: 35px;
+      margin: 0 10px;
+      vertical-align: middle;
+      transition: transform 0.3s;
+    }
+
+    footer .footer-logos img:hover {
+      transform: scale(1.1);
+    }
+
+    footer .copyright {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    /* ===================media================ */
+
+    /* 📱 Responsive for Tablet and Mobile */
+@media (max-width: 1024px) {
+  nav {
+    gap: 40px;
+  }
+
+  .categories {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    margin: 1rem auto;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Header layout */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  /* Hero image smaller */
+  .hero {
+    margin: 10px auto;
+  }
+
+  /* Cards smaller */
+  .categories {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Logo text hidden for space */
+  .logo h1 {
+    font-size: 16px;
+  }
+
+  .login input {
+    width: 100px;
+    font-size: 12px;
+  }
+
+  .login button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .categories {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 20px 10px;
+  }
+}
